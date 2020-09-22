@@ -1,0 +1,4 @@
+---
+- name: Debug print from role1
+  debug:
+    msg: Result={{ value }}

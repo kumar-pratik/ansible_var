@@ -1,0 +1,14 @@
+- hosts: all
+  remote_user: pratik
+  vars_files:
+    - vars/file.yml
+  vars:
+    value: This is the vars section in the play
+  roles:
+    - role: role1
+    - role: role2 
+      value: This is the value passed to the role in the play
+  tasks:
+    - name: Debug print from the play 
+      debug:
+        msg: Result={{ value }}
